@@ -9,6 +9,9 @@ __pycache__/
 # Images
 Resources/
 
+# Pbix files
+Pbix files/
+
 # Distribution / packaging
 .Python
 build/
