@@ -1,0 +1,106 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "ReportSection82e2774010522389a015",
+  "displayName": "Experience",
+  "displayOption": "FitToPage",
+  "height": 720,
+  "width": 1280,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#FAF9F8'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          },
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Frame 1.svg'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "Frame_17691759368680393.svg"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Normal'"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Middle'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visualInteractions": [
+    {
+      "source": "27c8058c40edf445440d",
+      "target": "c1dcf25fe79110a6150d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "02426bf57f3936191bfd",
+      "target": "c1dcf25fe79110a6150d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "02426bf57f3936191bfd",
+      "target": "27c8058c40edf445440d",
+      "type": "NoFilter"
+    },
+    {
+      "source": "27c8058c40edf445440d",
+      "target": "02426bf57f3936191bfd",
+      "type": "NoFilter"
+    },
+    {
+      "source": "27c8058c40edf445440d",
+      "target": "13ba9c60bf8205e63527",
+      "type": "NoFilter"
+    },
+    {
+      "source": "02426bf57f3936191bfd",
+      "target": "13ba9c60bf8205e63527",
+      "type": "NoFilter"
+    }
+  ]
+}

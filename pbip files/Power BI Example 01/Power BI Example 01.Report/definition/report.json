@@ -1,0 +1,107 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU02",
+      "reportVersionAtImport": "5.53",
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "CYBHSkillsExample3657910905868824.json",
+      "reportVersionAtImport": "5.53",
+      "type": "RegisteredResources"
+    }
+  },
+  "layoutOptimization": "PhonePortrait",
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY24SU02",
+          "path": "BaseThemes/CY24SU02.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "CYBHSkillsExample3657910905868824.json",
+          "path": "CYBHSkillsExample3657910905868824.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "Frame_17691759368680393.svg",
+          "path": "Frame_17691759368680393.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Frame_29753250678436105.svg",
+          "path": "Frame_29753250678436105.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Frame_35282826807397702.svg",
+          "path": "Frame_35282826807397702.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Frame_4835821549539352.svg",
+          "path": "Frame_4835821549539352.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Frame_5521971292022841.svg",
+          "path": "Frame_5521971292022841.svg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  },
+  "slowDataSourceSettings": {
+    "isCrossHighlightingDisabled": false,
+    "isSlicerSelectionsButtonEnabled": false,
+    "isFilterSelectionsButtonEnabled": false,
+    "isFieldWellButtonEnabled": false,
+    "isApplyAllButtonEnabled": false
+  }
+}

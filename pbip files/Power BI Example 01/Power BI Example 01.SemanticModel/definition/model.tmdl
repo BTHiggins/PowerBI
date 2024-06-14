@@ -10,7 +10,7 @@ annotation PBI_QueryOrder = ["fWeather","dLocation","fWork info","dJob info","_M
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.128.1177.0 (24.04)
+annotation PBIDesktopVersion = 2.130.754.0 (24.06)
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
@@ -20,4 +20,6 @@ ref table dLocation
 ref table 'fWork info'
 ref table 'dJob info'
 ref table _Measures
+
+ref cultureInfo en-US
 

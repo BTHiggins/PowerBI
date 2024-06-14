@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "ReportSection3e38ac11801dfbacaf1e",
+  "displayName": "Experience tooltip 2",
+  "displayOption": "ActualSize",
+  "height": 100,
+  "width": 320,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filtera2841a3dac49cb483bcd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dJob info"
+              }
+            },
+            "Property": "Role"
+          }
+        },
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "pageBinding": {
+    "name": "Pod1",
+    "type": "Tooltip",
+    "parameters": [
+      {
+        "name": "Param_Filtera2841a3dac49cb483bcd",
+        "boundFilter": "Filtera2841a3dac49cb483bcd",
+        "fieldExpr": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dJob info"
+              }
+            },
+            "Property": "Role"
+          }
+        }
+      }
+    ]
+  },
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "color": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "ThemeDataColor": {
+                    "ColorId": 2,
+                    "Percent": 0.6
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}
