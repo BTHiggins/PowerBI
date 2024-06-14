@@ -1,0 +1,89 @@
+table 'dJob info'
+	excludeFromModelRefresh
+	lineageTag: 69acf3fd-9370-4352-b9e4-ab3a7776d093
+
+	column Role
+		dataType: string
+		lineageTag: 9ae6e9fc-81b7-4571-a28a-0151641cc100
+		summarizeBy: none
+		sourceColumn: Role
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Years in role'
+		dataType: int64
+		formatString: 0
+		lineageTag: d6948931-1e0c-429e-955f-4ad512b2f6e8
+		summarizeBy: sum
+		sourceColumn: Years in role
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Role summary'
+		dataType: string
+		lineageTag: b6620267-a33c-471e-8bb3-dedeb71d9075
+		summarizeBy: none
+		sourceColumn: Role summary
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5fd432d4-50ea-42f0-b7bf-c5b4e11d4078
+		summarizeBy: none
+		sourceColumn: Year
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	column 'Start year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7f462824-f079-473a-8710-0210aea02c7c
+		summarizeBy: none
+		sourceColumn: Start year
+
+		annotation SummarizationSetBy = User
+
+	column 'End year'
+		dataType: int64
+		formatString: 0
+		lineageTag: 614158e1-3377-4b3e-a77a-285585bb0493
+		summarizeBy: none
+		sourceColumn: End year
+
+		annotation SummarizationSetBy = User
+
+	column 'Role ID'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 192e04d3-81ff-494b-a369-288e1257c9b5
+		summarizeBy: none
+		sourceColumn: Role ID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = User
+
+	partition 'dJob info' = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/BTHiggins/PowerBI/main/Data/Job%20info.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Year", Int64.Type}, {"Role", type text}, {"Start year", Int64.Type}, {"End year", Int64.Type}, {"Years in role", Int64.Type}, {"Role summary", type text}}),
+				    #"Added Conditional Column" = Table.AddColumn(#"Changed Type", "Role ID", each if [Year] >= 2023 then 4 else if [Year] >= 2019 then 3 else if [Year] >= 2016 then 2 else 1, type any),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Added Conditional Column",{{"Role ID", Int64.Type}})
+				in
+				    #"Changed Type1"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

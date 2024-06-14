@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 736.00183497122657,
+            "y": 333.44901982716124
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "6d3ceee5-9e86-4388-846c-0c4bbabbee51",
+          "size": {
+            "height": 421.96764303571069,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 126.95909505183172,
+            "y": 1.2570207430874447
+          },
+          "nodeIndex": "dDate",
+          "nodeLineageTag": "b841eff6-fe8c-44d2-af0a-87119fd68be4",
+          "size": {
+            "height": 188.68681331221302,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 726.17277182603812,
+            "y": 1.0271711924285478
+          },
+          "nodeIndex": "dJob info",
+          "nodeLineageTag": "69acf3fd-9370-4352-b9e4-ab3a7776d093",
+          "size": {
+            "height": 261.65445634792371,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 136.44932755759638,
+            "y": 433.35347617508478
+          },
+          "nodeIndex": "fWeather",
+          "nodeLineageTag": "892bc418-dfea-442c-a53b-5dceb3ff3eb1",
+          "size": {
+            "height": 265.41025758065484,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 425.28693868666392,
+            "y": 434.9291771082552
+          },
+          "nodeIndex": "fWork info",
+          "nodeLineageTag": "0509c7b6-da97-47d0-8b59-359494d7c415",
+          "size": {
+            "height": 320.91575108295069,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 425.678265328334,
+            "y": 0
+          },
+          "nodeIndex": "dLocation",
+          "nodeLineageTag": "9b2d0a15-2eab-4cc0-ba39-89e2585c5fa7",
+          "size": {
+            "height": 183.54212445852465,
+            "width": 234
+          },
+          "zIndex": 4
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 79.553182037699784,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

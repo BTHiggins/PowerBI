@@ -1,0 +1,57 @@
+table dLocation
+	excludeFromModelRefresh
+	lineageTag: 9b2d0a15-2eab-4cc0-ba39-89e2585c5fa7
+
+	column Location
+		dataType: string
+		lineageTag: 264b4c3b-5b79-4d74-b479-f8becef88091
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		formatString: 0.00000
+		lineageTag: 3eec9188-fc1c-4b6b-883e-61acb66a785c
+		dataCategory: Latitude
+		summarizeBy: none
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column Longitude
+		dataType: double
+		formatString: 0.00000
+		lineageTag: f289b09f-3c65-4daa-9751-e40dea7f8c26
+		dataCategory: Longitude
+		summarizeBy: none
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Location Other'
+		dataType: string
+		lineageTag: 3344ee26-4eab-4f8d-824f-42e8f4d67fb0
+		summarizeBy: none
+		sourceColumn: Location Other
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dLocation = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/BTHiggins/PowerBI/main/Data/Location%20info.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Location", type text}, {"Latitude", type number}, {"Longitude", type number}, {"Location Other", type text}, {"", type text}, {"_1", type text}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type",{"Location", "Latitude", "Longitude", "Location Other"})
+				in
+				    #"Removed Other Columns"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

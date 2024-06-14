@@ -1,0 +1,102 @@
+table fWeather
+	excludeFromModelRefresh
+	lineageTag: 892bc418-dfea-442c-a53b-5dceb3ff3eb1
+
+	column Time
+		dataType: dateTime
+		formatString: h:nn AM/PM
+		lineageTag: 0f890da1-0221-4da6-bc8e-0b78852fc95c
+		summarizeBy: none
+		sourceColumn: Time
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Date
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: bf48076e-7c62-474d-b0ce-f0a846610093
+		summarizeBy: none
+		sourceColumn: Date
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Temp (c)'
+		dataType: double
+		lineageTag: 52b49285-e1b3-43d5-aed6-c9b1bd2bc32c
+		summarizeBy: sum
+		sourceColumn: Temp (c)
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Weather Category'
+		dataType: string
+		lineageTag: 4c753ed5-a494-4d23-92b2-c225ab314365
+		summarizeBy: none
+		sourceColumn: Weather Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weather Subcategory'
+		dataType: string
+		lineageTag: 44a94e43-151d-4c09-81a1-bccdce94b54e
+		summarizeBy: none
+		sourceColumn: Weather Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Location
+		dataType: string
+		lineageTag: 3fd896fd-4e4d-4d46-9594-eba499da145f
+		summarizeBy: none
+		sourceColumn: Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column Symbol
+		dataType: string
+		lineageTag: 7730b0c0-85b6-40bc-8d62-95910b9015d9
+		summarizeBy: none
+		sourceColumn: Symbol
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fWeather = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(Web.Contents("https://raw.githubusercontent.com/BTHiggins/PowerBI/main/Data/Location%20info.csv"),[Delimiter=",", Columns=6, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Location", type text}, {"Latitude", type number}, {"Longitude", type number}, {"Location Other", type text}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type",{"Location", "Latitude", "Longitude"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"Location", "location"}, {"Latitude", "latitude"}, {"Longitude", "longitude"}}),
+				    #"Run Python script" = Python.Execute("import requests#(lf)import pandas as pd#(lf)import numpy as np#(lf)import datetime#(lf)import os#(lf)#(lf)#(lf)api_key = os.getenv('openweather_api_key')#(lf)#(lf)#(lf)df_geo = dataset#(lf)#(lf)# creating an empty dataframe to append to.#(lf)df = pd.DataFrame()#(lf)#(lf)#(lf)for i in range(len(df_geo)):#(lf)    location = df_geo.iloc[i]['location']#(lf)    latitude = df_geo.iloc[i]['latitude']#(lf)    longitude = df_geo.iloc[i]['longitude']#(lf)#(lf)    api_url = f""https://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&appid={api_key}&units=metric""#(lf)    response = requests.get(api_url)#(lf)    weather_data = response.json()#(lf)#(lf)    data = weather_data['list']#(lf)#(lf)    l_timestamp = []#(lf)    l_date_time = []#(lf)    l_date = []#(lf)    l_temp = []#(lf)    l_weather = []#(lf)    l_weather_desc = []#(lf)#(lf)    # Loop through each date_time#(lf)    for j in range(len(data)):#(lf)        timestamp = data[j]['dt']#(lf)        date_time = datetime.datetime.fromtimestamp(timestamp)#(lf)        date = date_time.date()#(lf)        temp = weather_data['list'][j]['main']['temp']#(lf)        weather = weather_data['list'][j]['weather'][0]['main']#(lf)        weather_desc = weather_data['list'][j]['weather'][0]['description']#(lf)#(lf)        l_timestamp.append(timestamp)#(lf)        l_date_time.append(date_time)#(lf)        l_date.append(date)#(lf)        l_temp.append(temp)#(lf)        l_weather.append(weather)#(lf)        l_weather_desc.append(weather_desc)#(lf)#(lf)    dict_temporary = {'timestamp': l_timestamp, 'datetime': l_date_time, 'date': l_date, 'temp': l_temp, 'weather': l_weather, 'weather_desc': l_weather_desc}#(lf)#(lf)    df_temporary = pd.DataFrame(dict_temporary)#(lf)    df_temporary['location'] = location#(lf)    df_temporary['longitude'] = latitude#(lf)    df_temporary['latitude'] = longitude#(lf)#(lf)    if i == 0:#(lf)        df = df_temporary#(lf)    else:#(lf)        df = pd.concat([df, df_temporary])#(lf)#(lf)#(lf)",[dataset=#"Renamed Columns"]),
+				    df = #"Run Python script"{[Name="df"]}[Value],
+				    #"Changed Type1" = Table.TransformColumnTypes(df,{{"timestamp", Int64.Type}, {"datetime", type datetime}, {"date", type date}, {"temp", type number}, {"weather", type text}, {"weather_desc", type text}, {"location", type text}, {"longitude", type number}, {"latitude", type number}}),
+				    #"Removed Other Columns1" = Table.SelectColumns(#"Changed Type1",{"datetime", "date", "temp", "weather", "weather_desc", "location"}),
+				    #"Changed Type2" = Table.TransformColumnTypes(#"Removed Other Columns1",{{"datetime", type time}}),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Changed Type2",{{"datetime", "Time"}, {"date", "Date"}, {"temp", "Temp (c)"}, {"weather", "Weather Category"}, {"weather_desc", "Weather Subcategory"}, {"location", "Location"}}),
+				    #"Capitalized Each Word" = Table.TransformColumns(#"Renamed Columns1",{{"Weather Subcategory", Text.Proper, type text}}),
+				    Custom1 = Table.AddColumn(#"Capitalized Each Word", "Custom", each if [Weather Subcategory] = "Moderate Rain" then "☂" else if [Weather Subcategory] = "Light Rain" then "☂" else if [Weather Subcategory] = "Few Clouds" then "☼" else if [Weather Subcategory] = "Clear Sky" then "☼" else "☁", type text),
+				    #"Renamed Columns2" = Table.RenameColumns(Custom1,{{"Custom", "Symbol"}})
+				in
+				    #"Renamed Columns2"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

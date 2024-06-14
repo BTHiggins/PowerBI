@@ -1,0 +1,177 @@
+table _Measures
+	lineageTag: 6d3ceee5-9e86-4388-846c-0c4bbabbee51
+
+	measure 'Graph Constant' = 0
+		formatString: 0
+		isHidden
+		displayFolder: Work and Job
+		lineageTag: ecdccf65-4762-4dbf-adf8-2c44014adf92
+
+		changedProperty = IsHidden
+
+	measure 'Work info data labels' = "(Rank: " & MAX('fWork info'[Frequency Rank Value]) & ")"
+		displayFolder: Work and Job
+		lineageTag: f523c570-5f3c-4776-a267-546fbf13be7a
+
+	measure data_labels_for_role = IF([is_start_year] == 1, MAX('dJob info'[Role]), BLANK())
+		displayFolder: Work and Job
+		lineageTag: eb1b633e-da8c-461b-badc-8ac125eb79a3
+
+	measure is_start_year = IF(MAX('dJob info'[Year]) == MAX('dJob info'[Start year]), 1, 0)
+		formatString: 0
+		displayFolder: Work and Job
+		lineageTag: 4fdf22c9-391f-433e-b8df-f109030e595e
+
+	measure job_bar_colours = ```
+			IF([is_start_year] = 1, MAX('dJob info'[Role ID]), MAX('dJob info'[Role ID]) + 0.5)
+			
+			```
+		displayFolder: Work and Job
+		lineageTag: 0ac7b71f-f96d-450c-8fa5-44d5a9f1402b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Average Temp (c)' = AVERAGE(fWeather[Temp (c)])
+		formatString: 0
+		displayFolder: Weather
+		lineageTag: a7239c84-ce9b-4a11-930c-d90d694d3bc4
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Daily Max Temp (c)' =
+			
+			IF(COUNT(fWeather[Date]) == 1, BLANK(), MAX(fWeather[Temp (c)]))
+		formatString: 0
+		displayFolder: Weather
+		lineageTag: 38cba791-8f52-44cc-b8fc-6e25ac4ea39f
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Daily Min Temp (c)' =
+			
+			
+			IF(COUNT(fWeather[Date]) == 1, BLANK(), MIN(fWeather[Temp (c)]))
+		formatString: 0
+		displayFolder: Weather
+		lineageTag: a4f60a2c-c98d-443d-81b6-dfaa233826d1
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Max temp per time' = ```
+			
+			VAR temp_table = 
+			    MAXX(ALL(fWeather[Date], fWeather[Time], fWeather[Location]), [Daily Max Temp (c)])
+			
+			VAR result = IF(temp_table = [Daily Max Temp (c)], temp_table, BLANK())
+			
+			RETURN result
+			```
+		formatString: 0
+		isHidden
+		displayFolder: Weather
+		lineageTag: 929c063c-71f9-449c-8600-8109e8daad7d
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Min temp per time' = ```
+			
+			VAR temp_table = 
+			    MINX(ALL(fWeather[Date], fWeather[Time], fWeather[Location]), [Daily Min Temp (c)])
+			
+			VAR result = IF(temp_table = [Daily Min Temp (c)], temp_table, BLANK())
+			
+			RETURN result
+			```
+		formatString: 0
+		isHidden
+		displayFolder: Weather
+		lineageTag: db290d43-629c-41b7-b6e0-5642e203a57e
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	measure 'Most common daily weather' = ```
+			
+			
+			VAR temp_table = 
+			    TOPN(1,
+			        SUMMARIZE(
+			            fWeather, 
+			            fWeather[Weather Subcategory],
+			            fWeather[Symbol],
+			            "count", COUNT(fWeather[Weather Subcategory])
+			        ),
+			        [count],
+			        DESC, 
+			        fWeather[Weather Subcategory], 
+			        DESC
+			    )
+			
+			VAR result = MAXX(temp_table, fWeather[Weather Subcategory])
+			
+			RETURN result
+			```
+		isHidden
+		displayFolder: Weather
+		lineageTag: 86c626f3-fdc1-494d-ad80-d7d884f2f9b6
+
+		changedProperty = IsHidden
+
+	measure 'Most common daily weather Symbol' = ```
+			
+			
+			VAR temp_table = 
+			    TOPN(1,
+			        SUMMARIZE(
+			            fWeather, 
+			            fWeather[Weather Subcategory],
+			            fWeather[Symbol],
+			            "count", COUNT(fWeather[Weather Subcategory])
+			        ),
+			        [count],
+			        DESC, 
+			        fWeather[Weather Subcategory], 
+			        DESC
+			    )
+			
+			VAR result = MAXX(temp_table, fWeather[Symbol])
+			
+			RETURN result
+			```
+		isHidden
+		displayFolder: Weather
+		lineageTag: ac328ff2-1e98-496a-b04a-fcd93ca04b9b
+
+		changedProperty = IsHidden
+
+	measure 'Date for weather subtitle' =
+			
+			
+			VAR _max = FORMAT(MAX(dDate[Date]), "dd mmmm")
+			VAR _min = FORMAT(MIN(dDate[Date]), "dd mmmm")
+			
+			
+			RETURN IF(_max == _min, _max, _min & " - " &_max)
+		isHidden
+		displayFolder: Weather
+		lineageTag: 2cad0984-5bd1-4e51-b158-6a4873412476
+
+		changedProperty = IsHidden
+
+	partition _Measures = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,69 @@
+table dDate
+	lineageTag: b841eff6-fe8c-44d2-af0a-87119fd68be4
+	dataCategory: Time
+
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: ea9da59c-2bf3-4ccd-8bb1-cdc8149f0415
+		summarizeBy: none
+		isNameInferred
+		isDataTypeInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Day of week' = FORMAT(dDate[Date], "dddd")
+		dataType: string
+		lineageTag: 4692df5b-39e7-452b-a32c-214f61ff3ba6
+		summarizeBy: none
+		isDataTypeInferred
+		sortByColumn: 'Day of week number'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day of week number' =
+			
+			SWITCH(
+			    FORMAT(dDate[Date], "dddd"),
+			    "Monday", 1,
+			    "Tuesday", 2,
+			    "Wednesday", 3,
+			    "Thursday", 4,
+			    "Friday", 5,
+			    "Saturday", 6,
+			    "Sunday", 7
+			)
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: cc3b7543-5133-4a77-a1da-24e9573c689b
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	column Midweek-Weekend =
+			
+			SWITCH(
+			    FORMAT(dDate[Date], "dddd"),
+			    "Saturday", "Weekend",
+			    "Sunday", "Weekend",
+			    "Midweek"
+			)
+		dataType: string
+		lineageTag: 2e264db2-758b-4c64-8422-5287e7cfbe0b
+		summarizeBy: none
+		isDataTypeInferred
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dDate = calculated
+		mode: import
+		source = CALENDAR(MIN(fWeather[Date]), MAX(fWeather[Date]))
+
+	annotation PBI_Id = e868e0fdcdd041acb8b8946dd10bbff0
+
