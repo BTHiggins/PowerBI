@@ -30,7 +30,7 @@ countpoints = dimension, joins on count_point_id
 
 
 Data prep:
-	In report description, state "could have done directly from website, but incase link changes hosting it on github.
+	In report description, state "could have done directly from website, but incase link changes hosting it on github".
 	Remove dupe columns found in the dimension
 	Work out which way is "toward" and "away" from central oxford
 		Base this on 'direction_of_travel' and long, lat position from central oxford long lat position.

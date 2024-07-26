@@ -39,7 +39,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "Here's a short report to demonstrate that I have experience with Power BI. This report is relatively simple and by no means captures all the Power BI knowledge I have. ",
+                    "value": "Here's a short report to demonstrate that I have experience with Power BI. This report is relatively simple and by no means captures all the features of Power BI I am familiar with.",
                     "textStyle": {
                       "fontSize": "14pt",
                       "color": "#ffffff"
@@ -57,7 +57,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "The source data for this report is stored on my public github repository and all the transformations are accessible in the power query view.",
+                    "value": "The source data for this report is stored on my public GitHub repository and all the transformations are accessible in the power query view.",
                     "textStyle": {
                       "fontFamily": "inherit",
                       "fontSize": "14pt",

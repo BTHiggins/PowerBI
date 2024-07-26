@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
   "name": "7f6bfbfabf3f544b9e75",
   "position": {
-    "x": 58.000000000000007,
-    "y": 570,
+    "x": 64,
+    "y": 544,
     "z": 1000,
     "width": 560,
-    "height": 144,
+    "height": 160,
     "tabOrder": 1000
   },
   "visual": {
@@ -16,6 +16,18 @@
         {
           "properties": {
             "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Author",
+                    "textStyle": {
+                      "fontSize": "14pt",
+                      "textDecoration": "underline",
+                      "color": "#ffffff"
+                    }
+                  }
+                ]
+              },
               {
                 "textRuns": [
                   {

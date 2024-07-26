@@ -5,7 +5,45 @@
   "displayOption": "ActualSize",
   "height": 450,
   "width": 320,
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "Filter9b1289816a374574b642",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Average Temp (c)"
+          }
+        },
+        "howCreated": "Drillthrough"
+      }
+    ]
+  },
   "visibility": "HiddenInViewMode",
+  "pageBinding": {
+    "name": "0efb17286117d0373deb",
+    "type": "Tooltip",
+    "parameters": [
+      {
+        "name": "Param_Filter9b1289816a374574b642",
+        "boundFilter": "Filter9b1289816a374574b642",
+        "fieldExpr": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Measures"
+              }
+            },
+            "Property": "Average Temp (c)"
+          }
+        }
+      }
+    ]
+  },
   "objects": {
     "background": [
       {

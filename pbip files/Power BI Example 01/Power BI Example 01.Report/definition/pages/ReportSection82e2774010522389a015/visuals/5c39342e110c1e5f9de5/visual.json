@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "While the core of my current role is developing the Power BI ecosystem within the department, I am involved with many other facets of the general data ecosystem - ranging from creating temporary ETL/ELT pipelines to carrying out and producing analysis reports (notebooks) on A/B tests.",
+                    "value": "While the core of my current role is developing the Power BI ecosystem within the department, I am involved with many other facets of the general data ecosystem - ranging from creating ETL/ELT pipelines to carrying out A/B test and presenting the findings.",
                     "textStyle": {
                       "color": "#ffffff"
                     }

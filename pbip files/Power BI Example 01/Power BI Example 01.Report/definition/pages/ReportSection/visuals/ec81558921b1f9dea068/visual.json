@@ -26,7 +26,7 @@
                   "Property": "Time"
                 }
               },
-              "queryRef": "fctWeather.Time",
+              "queryRef": "fWeather.Time",
               "nativeQueryRef": "Time"
             },
             {
@@ -101,7 +101,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "64.50001132487981D"
+                  "Value": "75.64675566011924D"
                 }
               }
             }
@@ -122,6 +122,20 @@
           },
           "selector": {
             "metadata": "_Measures.Most common daily weather"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "70.22222247154887D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fWeather.Time"
           }
         }
       ],
@@ -276,15 +290,7 @@
       ],
       "total": [
         {
-          "properties": {
-            "totals": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },

@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
-  "name": "68395d93928a13569b37",
+  "name": "3051c78dcace0c420e81",
   "position": {
-    "x": 1128,
-    "y": 8,
-    "z": 14000,
-    "width": 112,
-    "height": 64,
-    "tabOrder": 14000
+    "x": 928,
+    "y": 480,
+    "z": 0,
+    "width": 192,
+    "height": 32,
+    "tabOrder": 8002
   },
   "visual": {
     "visualType": "textbox",
@@ -19,24 +19,10 @@
               {
                 "textRuns": [
                   {
-                    "value": ""
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": "Click for help",
+                    "value": "Created by Ben Higgins",
                     "textStyle": {
-                      "color": "#ffffff"
+                      "color": "#faf9f8"
                     }
-                  }
-                ]
-              },
-              {
-                "textRuns": [
-                  {
-                    "value": ""
                   }
                 ]
               }

@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
   "name": "90dfd4be8c67283a5276",
   "position": {
-    "x": 416,
+    "x": 384,
     "y": 448,
     "z": 12000,
-    "width": 544,
+    "width": 576,
     "height": 256,
     "tabOrder": 1000
   },
@@ -23,12 +23,42 @@
                       "Entity": "dDate"
                     }
                   },
+                  "Property": "Midweek-Weekend"
+                }
+              },
+              "queryRef": "dDate.Midweek-Weekend",
+              "nativeQueryRef": "Midweek-Weekend",
+              "active": false
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dDate"
+                    }
+                  },
                   "Property": "Date"
                 }
               },
               "queryRef": "dimDate.Date",
               "nativeQueryRef": "Date",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dDate"
+                    }
+                  },
+                  "Property": "Day of week"
+                }
+              },
+              "queryRef": "dDate.Day of week",
+              "nativeQueryRef": "Day of week",
+              "active": false
             }
           ]
         },
@@ -81,24 +111,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dDate"
-                  }
-                },
-                "Property": "Date"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {

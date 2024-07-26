@@ -81,5 +81,6 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "cc4dde8b25e5e637550f"
+  "parentGroupName": "cc4dde8b25e5e637550f",
+  "isHidden": true
 }

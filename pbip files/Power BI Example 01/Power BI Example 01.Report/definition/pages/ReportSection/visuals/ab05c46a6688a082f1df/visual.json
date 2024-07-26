@@ -4,7 +4,7 @@
   "position": {
     "x": 592.00000000000011,
     "y": 128,
-    "z": 4000,
+    "z": 5000,
     "width": 640,
     "height": 48,
     "tabOrder": 6000
@@ -13,6 +13,30 @@
     "visualType": "advancedSlicerVisual",
     "query": {
       "queryState": {
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "dDate"
+                        }
+                      },
+                      "Property": "Day of week"
+                    }
+                  },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(dDate.Day of week)",
+              "nativeQueryRef": " ",
+              "displayName": " "
+            }
+          ]
+        },
         "Values": {
           "projections": [
             {
@@ -31,24 +55,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dDate"
-                  }
-                },
-                "Property": "Date"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -508,6 +514,19 @@
         {
           "properties": {
             "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"

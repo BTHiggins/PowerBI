@@ -4,7 +4,7 @@
   "position": {
     "x": 976,
     "y": 448,
-    "z": 1000,
+    "z": 3000,
     "width": 272,
     "height": 256,
     "tabOrder": 3000
@@ -69,7 +69,8 @@
                 }
               },
               "queryRef": "dimLocation.Longitude",
-              "nativeQueryRef": "Average of Longitude"
+              "nativeQueryRef": "Longitude",
+              "displayName": "Longitude"
             }
           ]
         },
@@ -92,7 +93,8 @@
                 }
               },
               "queryRef": "dimLocation.Latitude",
-              "nativeQueryRef": "Average of Latitude"
+              "nativeQueryRef": "Latitude",
+              "displayName": "Latitude"
             }
           ]
         }
@@ -122,223 +124,6 @@
           }
         }
       ],
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Conditional": {
-                      "Cases": [
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 1,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "dLocation"
-                                        }
-                                      },
-                                      "Property": "Recency Rank"
-                                    }
-                                  },
-                                  "Function": 0
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "1D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#6B007B'"
-                            }
-                          }
-                        },
-                        {
-                          "Condition": {
-                            "Comparison": {
-                              "ComparisonKind": 0,
-                              "Left": {
-                                "Aggregation": {
-                                  "Expression": {
-                                    "Column": {
-                                      "Expression": {
-                                        "SourceRef": {
-                                          "Entity": "dLocation"
-                                        }
-                                      },
-                                      "Property": "Recency Rank"
-                                    }
-                                  },
-                                  "Function": 0
-                                }
-                              },
-                              "Right": {
-                                "Literal": {
-                                  "Value": "1D"
-                                }
-                              }
-                            }
-                          },
-                          "Value": {
-                            "Literal": {
-                              "Value": "'#118DFF'"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "dLocation"
-                          }
-                        },
-                        "Property": "Location Other"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Previously Lived'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "dLocation"
-                          }
-                        },
-                        "Property": "Location Other"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Currently Live'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 8,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "dLocation"
-                          }
-                        },
-                        "Property": "Location Other"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'My Location'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        }
-      ],
       "categoryLabels": [
         {
           "properties": {
@@ -365,19 +150,6 @@
                       "Percent": 0
                     }
                   }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "bubbles": [
-        {
-          "properties": {
-            "bubbleSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "20L"
                 }
               }
             }
@@ -443,6 +215,105 @@
             }
           }
         }
+      ],
+      "bubbles": [
+        {
+          "properties": {
+            "bubbleSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "20L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dLocation"
+                          }
+                        },
+                        "Property": "Location Other"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'My Location'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 2,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "dLocation"
+                          }
+                        },
+                        "Property": "Location Other"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Friends and Family'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -478,7 +349,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }

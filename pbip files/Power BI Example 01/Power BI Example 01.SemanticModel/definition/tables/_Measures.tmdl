@@ -4,29 +4,29 @@ table _Measures
 	measure 'Graph Constant' = 0
 		formatString: 0
 		isHidden
-		displayFolder: Work and Job
+		displayFolder: Experience
 		lineageTag: ecdccf65-4762-4dbf-adf8-2c44014adf92
 
 		changedProperty = IsHidden
 
 	measure 'Work info data labels' = "(Rank: " & MAX('fWork info'[Frequency Rank Value]) & ")"
-		displayFolder: Work and Job
+		displayFolder: Experience
 		lineageTag: f523c570-5f3c-4776-a267-546fbf13be7a
 
 	measure data_labels_for_role = IF([is_start_year] == 1, MAX('dJob info'[Role]), BLANK())
-		displayFolder: Work and Job
+		displayFolder: Experience
 		lineageTag: eb1b633e-da8c-461b-badc-8ac125eb79a3
 
 	measure is_start_year = IF(MAX('dJob info'[Year]) == MAX('dJob info'[Start year]), 1, 0)
 		formatString: 0
-		displayFolder: Work and Job
+		displayFolder: Experience
 		lineageTag: 4fdf22c9-391f-433e-b8df-f109030e595e
 
 	measure job_bar_colours = ```
 			IF([is_start_year] = 1, MAX('dJob info'[Role ID]), MAX('dJob info'[Role ID]) + 0.5)
 			
 			```
-		displayFolder: Work and Job
+		displayFolder: Experience
 		lineageTag: 0ac7b71f-f96d-450c-8fa5-44d5a9f1402b
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

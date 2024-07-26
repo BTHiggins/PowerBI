@@ -26,7 +26,7 @@
                   "Property": "Date"
                 }
               },
-              "queryRef": "dimDate.Date",
+              "queryRef": "dDate.Date",
               "nativeQueryRef": "Date"
             },
             {
@@ -289,15 +289,7 @@
       ],
       "total": [
         {
-          "properties": {
-            "totals": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
