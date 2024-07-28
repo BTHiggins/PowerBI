@@ -16,7 +16,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Average Temp (c)"
+            "Property": "Average temp (c)"
           }
         },
         "howCreated": "Drillthrough"
@@ -38,7 +38,7 @@
                 "Entity": "_Measures"
               }
             },
-            "Property": "Average Temp (c)"
+            "Property": "Average temp (c)"
           }
         }
       }

@@ -6,7 +6,7 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
-annotation PBI_QueryOrder = ["fWeather","dLocation","fWork info","dJob info","_Measures"]
+annotation PBI_QueryOrder = ["Weather","Location","Work info","Job info","_Measures"]
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
@@ -14,11 +14,11 @@ annotation PBIDesktopVersion = 2.130.754.0 (24.06)
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
-ref table fWeather
-ref table dDate
-ref table dLocation
-ref table 'fWork info'
-ref table 'dJob info'
+ref table Weather
+ref table Date
+ref table Location
+ref table 'Work info'
+ref table 'Job info'
 ref table _Measures
 
 ref cultureInfo en-US

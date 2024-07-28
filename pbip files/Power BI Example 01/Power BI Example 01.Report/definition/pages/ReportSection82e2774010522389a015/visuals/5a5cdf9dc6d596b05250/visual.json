@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
   "name": "5a5cdf9dc6d596b05250",
   "position": {
-    "x": 880,
-    "y": 304,
+    "x": 496,
+    "y": 16,
     "z": 4000,
-    "width": 384.00000000000006,
-    "height": 176,
+    "width": 688,
+    "height": 112,
     "tabOrder": 5000
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "My current role as a Senior Power BI Analyst is to enable users to make revenue optimising decisions. I achieve this by creating high quality, user-friendly Power BI reports and managing all the content the team interacts with.",
+                    "value": "My current role as a Senior Power BI Analyst is to enable users to make revenue optimising decisions. I achieve this by creating high quality, user-friendly Power BI reports and managing all the content the team interacts with. I work with business stakeholders to translate their ideas and requirements into visual content.",
                     "textStyle": {
                       "color": "#ffffff"
                     }
@@ -36,7 +36,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "The reports are used by all ~40 members of the department and many others across the business. I work with business stakeholders within the team to shape their ideas and with the IT team to develop new data elements.",
+                    "value": "The reports are used by all ~40 members of the department and many others across the business. ",
                     "textStyle": {
                       "color": "#ffffff"
                     }
@@ -80,7 +80,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -89,10 +89,17 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 3,
+                      "ColorId": 0,
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
                 }
               }
             }

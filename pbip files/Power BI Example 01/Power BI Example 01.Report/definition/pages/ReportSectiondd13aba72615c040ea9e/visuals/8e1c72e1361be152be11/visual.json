@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dLocation"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Location"
@@ -42,7 +42,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Average Temp (c)"
+                  "Property": "Average temp (c)"
                 }
               },
               "queryRef": "_Measures.Average Temp (c)",
@@ -61,7 +61,7 @@
                     "Entity": "_Measures"
                   }
                 },
-                "Property": "Average Temp (c)"
+                "Property": "Average temp (c)"
               }
             },
             "direction": "Descending"
@@ -386,7 +386,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Daily Min Temp (c)"
+                      "Property": "Daily min temp (c)"
                     }
                   }
                 },
@@ -398,7 +398,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Daily Max Temp (c)"
+                      "Property": "Daily max temp (c)"
                     }
                   }
                 }

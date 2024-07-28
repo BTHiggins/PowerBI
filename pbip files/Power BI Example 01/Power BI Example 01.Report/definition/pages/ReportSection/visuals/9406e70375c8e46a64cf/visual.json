@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
   "name": "9406e70375c8e46a64cf",
   "position": {
-    "x": 976,
-    "y": 448,
+    "x": 975.99999999999989,
+    "y": 432,
     "z": 3000,
     "width": 272,
-    "height": 256,
+    "height": 272,
     "tabOrder": 3000
   },
   "visual": {
@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dLocation"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Location"
@@ -39,7 +39,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dLocation"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Location Other"
@@ -59,7 +59,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dLocation"
+                          "Entity": "Location"
                         }
                       },
                       "Property": "Longitude"
@@ -83,7 +83,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dLocation"
+                          "Entity": "Location"
                         }
                       },
                       "Property": "Latitude"
@@ -255,7 +255,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dLocation"
+                            "Entity": "Location"
                           }
                         },
                         "Property": "Location Other"
@@ -297,7 +297,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dLocation"
+                            "Entity": "Location"
                           }
                         },
                         "Property": "Location Other"

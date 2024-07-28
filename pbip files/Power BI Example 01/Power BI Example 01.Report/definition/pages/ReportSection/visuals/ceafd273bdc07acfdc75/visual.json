@@ -3,11 +3,11 @@
   "name": "ceafd273bdc07acfdc75",
   "position": {
     "x": 944,
-    "y": 192,
+    "y": 168,
     "z": 10000,
     "width": 64,
     "height": 48,
-    "tabOrder": 11000
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "card",
@@ -141,7 +141,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dLocation"
+                "Entity": "Location"
               }
             },
             "Property": "Location"
@@ -152,7 +152,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "dLocation",
+              "Entity": "Location",
               "Type": 0
             }
           ],

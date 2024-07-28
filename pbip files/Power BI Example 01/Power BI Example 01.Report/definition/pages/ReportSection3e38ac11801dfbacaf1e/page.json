@@ -13,7 +13,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dJob info"
+                "Entity": "Job info"
               }
             },
             "Property": "Role"
@@ -35,7 +35,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dJob info"
+                "Entity": "Job info"
               }
             },
             "Property": "Role"
@@ -53,8 +53,8 @@
               "color": {
                 "expr": {
                   "ThemeDataColor": {
-                    "ColorId": 2,
-                    "Percent": 0.6
+                    "ColorId": 0,
+                    "Percent": 0
                   }
                 }
               }

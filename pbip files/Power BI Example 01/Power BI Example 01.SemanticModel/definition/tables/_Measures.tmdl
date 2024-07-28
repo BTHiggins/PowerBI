@@ -1,7 +1,7 @@
 table _Measures
 	lineageTag: 6d3ceee5-9e86-4388-846c-0c4bbabbee51
 
-	measure 'Graph Constant' = 0
+	measure 'Graph constant' = 0
 		formatString: 0
 		isHidden
 		displayFolder: Experience
@@ -9,21 +9,21 @@ table _Measures
 
 		changedProperty = IsHidden
 
-	measure 'Work info data labels' = "(Rank: " & MAX('fWork info'[Frequency Rank Value]) & ")"
+	measure 'Work info data labels' = "(Rank: " & MAX('Work info'[Frequency rank value]) & ")"
 		displayFolder: Experience
 		lineageTag: f523c570-5f3c-4776-a267-546fbf13be7a
 
-	measure data_labels_for_role = IF([is_start_year] == 1, MAX('dJob info'[Role]), BLANK())
+	measure 'Data labels for role' = IF([is_start_year] == 1, MAX('Job info'[Role]), BLANK())
 		displayFolder: Experience
 		lineageTag: eb1b633e-da8c-461b-badc-8ac125eb79a3
 
-	measure is_start_year = IF(MAX('dJob info'[Year]) == MAX('dJob info'[Start year]), 1, 0)
+	measure is_start_year = IF(MAX('Job info'[Year]) == MAX('Job info'[Start year]), 1, 0)
 		formatString: 0
 		displayFolder: Experience
 		lineageTag: 4fdf22c9-391f-433e-b8df-f109030e595e
 
-	measure job_bar_colours = ```
-			IF([is_start_year] = 1, MAX('dJob info'[Role ID]), MAX('dJob info'[Role ID]) + 0.5)
+	measure 'Job bar colours' = ```
+			IF([is_start_year] = 1, MAX('Job info'[Role ID]), MAX('Job info'[Role ID]) + 0.5)
 			
 			```
 		displayFolder: Experience
@@ -31,26 +31,21 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Average Temp (c)' = AVERAGE(fWeather[Temp (c)])
+	measure 'Average temp (c)' = AVERAGE(Weather[Temp (c)])
 		formatString: 0
 		displayFolder: Weather
 		lineageTag: a7239c84-ce9b-4a11-930c-d90d694d3bc4
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Daily Max Temp (c)' =
-			
-			IF(COUNT(fWeather[Date]) == 1, BLANK(), MAX(fWeather[Temp (c)]))
+	measure 'Daily max temp (c)' = IF(COUNT(Weather[Date]) == 1, BLANK(), MAX(Weather[Temp (c)]))
 		formatString: 0
 		displayFolder: Weather
 		lineageTag: 38cba791-8f52-44cc-b8fc-6e25ac4ea39f
 
 		annotation PBI_FormatHint = {"isDecimal":true}
 
-	measure 'Daily Min Temp (c)' =
-			
-			
-			IF(COUNT(fWeather[Date]) == 1, BLANK(), MIN(fWeather[Temp (c)]))
+	measure 'Daily min temp (c)' = IF(COUNT(Weather[Date]) == 1, BLANK(), MIN(Weather[Temp (c)]))
 		formatString: 0
 		displayFolder: Weather
 		lineageTag: a4f60a2c-c98d-443d-81b6-dfaa233826d1
@@ -60,9 +55,12 @@ table _Measures
 	measure 'Max temp per time' = ```
 			
 			VAR temp_table = 
-			    MAXX(ALL(fWeather[Date], fWeather[Time], fWeather[Location]), [Daily Max Temp (c)])
+			    MAXX(
+			        ALL(Weather[Date], Weather[Time], Weather[Location]), 
+			        [Daily max temp (c)]
+			    )
 			
-			VAR result = IF(temp_table = [Daily Max Temp (c)], temp_table, BLANK())
+			VAR result = IF(temp_table = [Daily max temp (c)], temp_table, BLANK())
 			
 			RETURN result
 			```
@@ -78,9 +76,12 @@ table _Measures
 	measure 'Min temp per time' = ```
 			
 			VAR temp_table = 
-			    MINX(ALL(fWeather[Date], fWeather[Time], fWeather[Location]), [Daily Min Temp (c)])
+			    MINX(
+			        ALL(Weather[Date], Weather[Time], Weather[Location]), 
+			        [Daily min temp (c)]
+			    )
 			
-			VAR result = IF(temp_table = [Daily Min Temp (c)], temp_table, BLANK())
+			VAR result = IF(temp_table = [Daily min temp (c)], temp_table, BLANK())
 			
 			RETURN result
 			```
@@ -99,18 +100,18 @@ table _Measures
 			VAR temp_table = 
 			    TOPN(1,
 			        SUMMARIZE(
-			            fWeather, 
-			            fWeather[Weather Subcategory],
-			            fWeather[Symbol],
-			            "count", COUNT(fWeather[Weather Subcategory])
+			            Weather, 
+			            Weather[Weather Subcategory],
+			            Weather[Symbol],
+			            "count", COUNT(Weather[Weather Subcategory])
 			        ),
 			        [count],
 			        DESC, 
-			        fWeather[Weather Subcategory], 
+			        Weather[Weather Subcategory], 
 			        DESC
 			    )
 			
-			VAR result = MAXX(temp_table, fWeather[Weather Subcategory])
+			VAR result = MAXX(temp_table, Weather[Weather Subcategory])
 			
 			RETURN result
 			```
@@ -126,18 +127,18 @@ table _Measures
 			VAR temp_table = 
 			    TOPN(1,
 			        SUMMARIZE(
-			            fWeather, 
-			            fWeather[Weather Subcategory],
-			            fWeather[Symbol],
-			            "count", COUNT(fWeather[Weather Subcategory])
+			            Weather, 
+			            Weather[Weather Subcategory],
+			            Weather[Symbol],
+			            "count", COUNT(Weather[Weather Subcategory])
 			        ),
 			        [count],
 			        DESC, 
-			        fWeather[Weather Subcategory], 
+			        Weather[Weather Subcategory], 
 			        DESC
 			    )
 			
-			VAR result = MAXX(temp_table, fWeather[Symbol])
+			VAR result = MAXX(temp_table, Weather[Symbol])
 			
 			RETURN result
 			```
@@ -150,9 +151,8 @@ table _Measures
 	measure 'Date for weather subtitle' =
 			
 			
-			VAR _max = FORMAT(MAX(dDate[Date]), "dd mmmm")
-			VAR _min = FORMAT(MIN(dDate[Date]), "dd mmmm")
-			
+			VAR _max = FORMAT(MAX('Date'[Date]), "dd mmmm")
+			VAR _min = FORMAT(MIN('Date'[Date]), "dd mmmm")
 			
 			RETURN IF(_max == _min, _max, _min & " - " &_max)
 		isHidden

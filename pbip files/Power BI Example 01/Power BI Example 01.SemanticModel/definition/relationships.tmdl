@@ -1,8 +1,8 @@
 relationship f90537ba-615b-448b-8f60-9f38ddf2cd23
-	fromColumn: fWeather.Date
-	toColumn: dDate.Date
+	fromColumn: Weather.Date
+	toColumn: Date.Date
 
 relationship AutoDetected_8f179c60-933d-4aaf-b0b0-2f4dde7f8397
-	fromColumn: fWeather.Location
-	toColumn: dLocation.Location
+	fromColumn: Weather.Location
+	toColumn: Location.Location
 

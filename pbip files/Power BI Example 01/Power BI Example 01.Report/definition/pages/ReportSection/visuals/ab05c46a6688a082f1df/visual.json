@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
   "name": "ab05c46a6688a082f1df",
   "position": {
-    "x": 592.00000000000011,
-    "y": 128,
+    "x": 624,
+    "y": 80,
     "z": 5000,
     "width": 640,
     "height": 48,
@@ -22,7 +22,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dDate"
+                          "Entity": "Date"
                         }
                       },
                       "Property": "Day of week"
@@ -44,7 +44,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dDate"
+                      "Entity": "Date"
                     }
                   },
                   "Property": "Date"
@@ -407,6 +407,13 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
                 }
               }
             }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
   "name": "5c39342e110c1e5f9de5",
   "position": {
-    "x": 175.41664123535156,
-    "y": 163.75,
+    "x": 32,
+    "y": 200,
     "z": 5000,
-    "width": 384.00000000000006,
-    "height": 112,
+    "width": 560,
+    "height": 80,
     "tabOrder": 0
   },
   "visual": {
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "While the core of my current role is developing the Power BI ecosystem within the department, I am involved with many other facets of the general data ecosystem - ranging from creating ETL/ELT pipelines to carrying out A/B test and presenting the findings.",
+                    "value": "While the core of my current role is developing Power BI content, I am also involved with many other facets of the general data and analytics ecosystem - ranging from creating ETL/ELT pipelines to carrying out A/B test and presenting the findings.",
                     "textStyle": {
                       "color": "#ffffff"
                     }
@@ -63,7 +63,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -72,10 +72,17 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 3,
+                      "ColorId": 0,
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
                 }
               }
             }

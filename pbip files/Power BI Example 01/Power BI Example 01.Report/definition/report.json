@@ -33,7 +33,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "false"
+                "Value": "true"
               }
             }
           }
@@ -63,16 +63,6 @@
           "type": "CustomTheme"
         },
         {
-          "name": "Frame_17691759368680393.svg",
-          "path": "Frame_17691759368680393.svg",
-          "type": "Image"
-        },
-        {
-          "name": "Frame_29753250678436105.svg",
-          "path": "Frame_29753250678436105.svg",
-          "type": "Image"
-        },
-        {
           "name": "Frame_35282826807397702.svg",
           "path": "Frame_35282826807397702.svg",
           "type": "Image"
@@ -85,6 +75,16 @@
         {
           "name": "Frame_5521971292022841.svg",
           "path": "Frame_5521971292022841.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Frame_203312498577288281.svg",
+          "path": "Frame_203312498577288281.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Frame_1607097978542394.svg",
+          "path": "Frame_1607097978542394.svg",
           "type": "Image"
         }
       ]

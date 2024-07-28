@@ -21,7 +21,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fWork info"
+                          "Entity": "Work info"
                         }
                       },
                       "Property": "Sub-topic"
@@ -62,7 +62,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fWork info"
+                          "Entity": "Work info"
                         }
                       },
                       "Property": "Tech image"
@@ -219,7 +219,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "fWork info"
+                "Entity": "Work info"
               }
             },
             "Property": "Topic"
@@ -230,7 +230,7 @@
           "From": [
             {
               "Name": "f",
-              "Entity": "fWork info",
+              "Entity": "Work info",
               "Type": 0
             }
           ],

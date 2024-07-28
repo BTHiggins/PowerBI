@@ -1,4 +1,4 @@
-table dLocation
+table Location
 	excludeFromModelRefresh
 	lineageTag: 9b2d0a15-2eab-4cc0-ba39-89e2585c5fa7
 
@@ -38,7 +38,7 @@ table dLocation
 
 		annotation SummarizationSetBy = Automatic
 
-	partition dLocation = m
+	partition Location = m
 		mode: import
 		source =
 				let

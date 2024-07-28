@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
   "name": "49f297d73e64db71398b",
   "position": {
-    "x": 480,
-    "y": 192,
+    "x": 472,
+    "y": 168,
     "z": 8000,
     "width": 64,
     "height": 48,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -141,7 +141,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dLocation"
+                "Entity": "Location"
               }
             },
             "Property": "Location"
@@ -152,7 +152,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "dLocation",
+              "Entity": "Location",
               "Type": 0
             }
           ],

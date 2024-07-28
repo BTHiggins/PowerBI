@@ -1,4 +1,4 @@
-table 'dJob info'
+table 'Job info'
 	excludeFromModelRefresh
 	lineageTag: 69acf3fd-9370-4352-b9e4-ab3a7776d093
 
@@ -69,7 +69,7 @@ table 'dJob info'
 
 		annotation SummarizationSetBy = User
 
-	partition 'dJob info' = m
+	partition 'Job info' = m
 		mode: import
 		source =
 				let

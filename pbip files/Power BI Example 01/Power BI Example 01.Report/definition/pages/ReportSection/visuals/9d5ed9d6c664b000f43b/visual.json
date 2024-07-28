@@ -3,7 +3,7 @@
   "name": "9d5ed9d6c664b000f43b",
   "position": {
     "x": 704,
-    "y": 192,
+    "y": 168,
     "z": 6000,
     "width": 64,
     "height": 48,
@@ -141,7 +141,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dLocation"
+                "Entity": "Location"
               }
             },
             "Property": "Location"
@@ -152,7 +152,7 @@
           "From": [
             {
               "Name": "d",
-              "Entity": "dLocation",
+              "Entity": "Location",
               "Type": 0
             }
           ],

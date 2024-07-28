@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fWork info"
+                      "Entity": "Work info"
                     }
                   },
                   "Property": "Sub-topic"
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fWork info"
+                          "Entity": "Work info"
                         }
                       },
                       "Property": "Visualisation & Analysis"
@@ -61,10 +61,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fWork info"
+                          "Entity": "Work info"
                         }
                       },
-                      "Property": "Data processing & Other"
+                      "Property": "Data processing & other"
                     }
                   },
                   "Function": 0
@@ -86,7 +86,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "fWork info"
+                        "Entity": "Work info"
                       }
                     },
                     "Property": "Visualisation & Analysis"

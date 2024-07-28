@@ -1,4 +1,4 @@
-table fWeather
+table Weather
 	excludeFromModelRefresh
 	lineageTag: 892bc418-dfea-442c-a53b-5dceb3ff3eb1
 
@@ -73,7 +73,7 @@ table fWeather
 
 		annotation SummarizationSetBy = Automatic
 
-	partition fWeather = m
+	partition Weather = m
 		mode: import
 		source =
 				let

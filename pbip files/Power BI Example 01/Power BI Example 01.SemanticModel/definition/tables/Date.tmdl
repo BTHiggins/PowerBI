@@ -1,4 +1,4 @@
-table dDate
+table Date
 	lineageTag: b841eff6-fe8c-44d2-af0a-87119fd68be4
 	dataCategory: Time
 
@@ -16,7 +16,7 @@ table dDate
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column 'Day of week' = FORMAT(dDate[Date], "dddd")
+	column 'Day of week' = FORMAT('Date'[Date], "dddd")
 		dataType: string
 		lineageTag: 4692df5b-39e7-452b-a32c-214f61ff3ba6
 		summarizeBy: none
@@ -28,7 +28,7 @@ table dDate
 	column 'Day of week number' =
 			
 			SWITCH(
-			    FORMAT(dDate[Date], "dddd"),
+			    FORMAT('Date'[Date], "dddd"),
 			    "Monday", 1,
 			    "Tuesday", 2,
 			    "Wednesday", 3,
@@ -49,7 +49,7 @@ table dDate
 	column Midweek-Weekend =
 			
 			SWITCH(
-			    FORMAT(dDate[Date], "dddd"),
+			    FORMAT('Date'[Date], "dddd"),
 			    "Saturday", "Weekend",
 			    "Sunday", "Weekend",
 			    "Midweek"
@@ -61,9 +61,9 @@ table dDate
 
 		annotation SummarizationSetBy = Automatic
 
-	partition dDate = calculated
+	partition Date = calculated
 		mode: import
-		source = CALENDAR(MIN(fWeather[Date]), MAX(fWeather[Date]))
+		source = CALENDAR(MIN(Weather[Date]), MAX(Weather[Date]))
 
 	annotation PBI_Id = e868e0fdcdd041acb8b8946dd10bbff0
 

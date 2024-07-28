@@ -166,7 +166,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Average Temp (c)"
+			          "ConceptualProperty": "Average temp (c)"
 			        }
 			      },
 			      "State": "Generated",
@@ -318,7 +318,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Daily Max Temp (c)"
+			          "ConceptualProperty": "Daily max temp (c)"
 			        }
 			      },
 			      "State": "Generated",
@@ -419,7 +419,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Daily Min Temp (c)"
+			          "ConceptualProperty": "Daily min temp (c)"
 			        }
 			      },
 			      "State": "Generated",
@@ -519,7 +519,7 @@ cultureInfo en-US
 			    "f_weather": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWeather"
+			          "ConceptualEntity": "Weather"
 			        }
 			      },
 			      "State": "Generated",
@@ -567,7 +567,7 @@ cultureInfo en-US
 			    "f_weather.time": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWeather",
+			          "ConceptualEntity": "Weather",
 			          "ConceptualProperty": "Time"
 			        }
 			      },
@@ -634,7 +634,7 @@ cultureInfo en-US
 			    "f_weather.date": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWeather",
+			          "ConceptualEntity": "Weather",
 			          "ConceptualProperty": "Date"
 			        }
 			      },
@@ -675,7 +675,7 @@ cultureInfo en-US
 			    "f_weather.temp": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWeather",
+			          "ConceptualEntity": "Weather",
 			          "ConceptualProperty": "Temp (c)"
 			        }
 			      },
@@ -720,7 +720,7 @@ cultureInfo en-US
 			    "f_weather.weather_category": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWeather",
+			          "ConceptualEntity": "Weather",
 			          "ConceptualProperty": "Weather Category"
 			        }
 			      },
@@ -842,7 +842,7 @@ cultureInfo en-US
 			    "f_weather.weather_subcategory": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWeather",
+			          "ConceptualEntity": "Weather",
 			          "ConceptualProperty": "Weather Subcategory"
 			        }
 			      },
@@ -864,7 +864,7 @@ cultureInfo en-US
 			    "f_weather.location": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWeather",
+			          "ConceptualEntity": "Weather",
 			          "ConceptualProperty": "Location"
 			        }
 			      },
@@ -983,7 +983,7 @@ cultureInfo en-US
 			    "f_weather.symbol": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWeather",
+			          "ConceptualEntity": "Weather",
 			          "ConceptualProperty": "Symbol"
 			        }
 			      },
@@ -1099,7 +1099,7 @@ cultureInfo en-US
 			    "d_date": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dDate"
+			          "ConceptualEntity": "Date"
 			        }
 			      },
 			      "State": "Generated",
@@ -1141,7 +1141,7 @@ cultureInfo en-US
 			    "d_date.date": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dDate",
+			          "ConceptualEntity": "Date",
 			          "ConceptualProperty": "Date"
 			        }
 			      },
@@ -1178,7 +1178,7 @@ cultureInfo en-US
 			    "d_date.day_of_week": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dDate",
+			          "ConceptualEntity": "Date",
 			          "ConceptualProperty": "Day of week"
 			        }
 			      },
@@ -1194,7 +1194,7 @@ cultureInfo en-US
 			    "d_date.day_of_week_number": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dDate",
+			          "ConceptualEntity": "Date",
 			          "ConceptualProperty": "Day of week number"
 			        }
 			      },
@@ -1223,7 +1223,7 @@ cultureInfo en-US
 			    "d_date.midweekweekend": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dDate",
+			          "ConceptualEntity": "Date",
 			          "ConceptualProperty": "Midweek-Weekend"
 			        }
 			      },
@@ -1251,7 +1251,7 @@ cultureInfo en-US
 			    "d_location": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dLocation"
+			          "ConceptualEntity": "Location"
 			        }
 			      },
 			      "State": "Generated",
@@ -1373,7 +1373,7 @@ cultureInfo en-US
 			    "d_location.location": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dLocation",
+			          "ConceptualEntity": "Location",
 			          "ConceptualProperty": "Location"
 			        }
 			      },
@@ -1489,7 +1489,7 @@ cultureInfo en-US
 			    "d_location.latitude": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dLocation",
+			          "ConceptualEntity": "Location",
 			          "ConceptualProperty": "Latitude"
 			        }
 			      },
@@ -1605,7 +1605,7 @@ cultureInfo en-US
 			    "d_location.longitude": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dLocation",
+			          "ConceptualEntity": "Location",
 			          "ConceptualProperty": "Longitude"
 			        }
 			      },
@@ -1621,7 +1621,7 @@ cultureInfo en-US
 			    "d_location.location_other": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dLocation",
+			          "ConceptualEntity": "Location",
 			          "ConceptualProperty": "Location Other"
 			        }
 			      },
@@ -1737,7 +1737,7 @@ cultureInfo en-US
 			    "fWork_info": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info"
+			          "ConceptualEntity": "Work info"
 			        }
 			      },
 			      "State": "Generated",
@@ -1842,7 +1842,7 @@ cultureInfo en-US
 			    "fWork_info.topic": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info",
+			          "ConceptualEntity": "Work info",
 			          "ConceptualProperty": "Topic"
 			        }
 			      },
@@ -1918,7 +1918,7 @@ cultureInfo en-US
 			    "fWork_info.subtopic": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info",
+			          "ConceptualEntity": "Work info",
 			          "ConceptualProperty": "Sub-topic"
 			        }
 			      },
@@ -2040,8 +2040,8 @@ cultureInfo en-US
 			    "fWork_info.frequency_rank_value": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info",
-			          "ConceptualProperty": "Frequency Rank Value"
+			          "ConceptualEntity": "Work info",
+			          "ConceptualProperty": "Frequency rank value"
 			        }
 			      },
 			      "State": "Generated",
@@ -2168,7 +2168,7 @@ cultureInfo en-US
 			    "fWork_info.subtopic_ID": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info",
+			          "ConceptualEntity": "Work info",
 			          "ConceptualProperty": "Sub-topic ID"
 			        }
 			      },
@@ -2305,7 +2305,7 @@ cultureInfo en-US
 			    "fWork_info.topic_ID": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info",
+			          "ConceptualEntity": "Work info",
 			          "ConceptualProperty": "Topic ID"
 			        }
 			      },
@@ -2364,7 +2364,7 @@ cultureInfo en-US
 			    "fWork_info.visualisation__analysis": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info",
+			          "ConceptualEntity": "Work info",
 			          "ConceptualProperty": "Visualisation & Analysis"
 			        }
 			      },
@@ -2480,8 +2480,8 @@ cultureInfo en-US
 			    "fWork_info.data_processing__other": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info",
-			          "ConceptualProperty": "Data processing & Other"
+			          "ConceptualEntity": "Work info",
+			          "ConceptualProperty": "Data processing & other"
 			        }
 			      },
 			      "State": "Generated",
@@ -2566,7 +2566,7 @@ cultureInfo en-US
 			    "fWork_info.tech_image": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info",
+			          "ConceptualEntity": "Work info",
 			          "ConceptualProperty": "Tech image"
 			        }
 			      },
@@ -2688,8 +2688,8 @@ cultureInfo en-US
 			    "fWork_info.frequency_rank": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "fWork info",
-			          "ConceptualProperty": "Frequency Rank"
+			          "ConceptualEntity": "Work info",
+			          "ConceptualProperty": "Frequency rank"
 			        }
 			      },
 			      "State": "Generated",
@@ -2704,7 +2704,7 @@ cultureInfo en-US
 			    "dJob_info": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dJob info"
+			          "ConceptualEntity": "Job info"
 			        }
 			      },
 			      "State": "Generated",
@@ -2809,7 +2809,7 @@ cultureInfo en-US
 			    "dJob_info.role": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dJob info",
+			          "ConceptualEntity": "Job info",
 			          "ConceptualProperty": "Role"
 			        }
 			      },
@@ -2925,7 +2925,7 @@ cultureInfo en-US
 			    "dJob_info.year_in_role": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dJob info",
+			          "ConceptualEntity": "Job info",
 			          "ConceptualProperty": "Years in role"
 			        }
 			      },
@@ -3047,7 +3047,7 @@ cultureInfo en-US
 			    "dJob_info.role_summary": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dJob info",
+			          "ConceptualEntity": "Job info",
 			          "ConceptualProperty": "Role summary"
 			        }
 			      },
@@ -3169,7 +3169,7 @@ cultureInfo en-US
 			    "dJob_info.year": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dJob info",
+			          "ConceptualEntity": "Job info",
 			          "ConceptualProperty": "Year"
 			        }
 			      },
@@ -3200,7 +3200,7 @@ cultureInfo en-US
 			    "dJob_info.start_year": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dJob info",
+			          "ConceptualEntity": "Job info",
 			          "ConceptualProperty": "Start year"
 			        }
 			      },
@@ -3233,7 +3233,7 @@ cultureInfo en-US
 			    "dJob_info.end_year": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dJob info",
+			          "ConceptualEntity": "Job info",
 			          "ConceptualProperty": "End year"
 			        }
 			      },
@@ -3356,7 +3356,7 @@ cultureInfo en-US
 			    "dJob_info.role_ID": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "dJob info",
+			          "ConceptualEntity": "Job info",
 			          "ConceptualProperty": "Role ID"
 			        }
 			      },
@@ -3511,7 +3511,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "Graph Constant"
+			          "ConceptualProperty": "Graph constant"
 			        }
 			      },
 			      "State": "Generated",
@@ -3720,7 +3720,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "data_labels_for_role"
+			          "ConceptualProperty": "Data labels for role"
 			        }
 			      },
 			      "State": "Generated",
@@ -3888,7 +3888,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "_Measures",
-			          "ConceptualProperty": "job_bar_colours"
+			          "ConceptualProperty": "Job bar colours"
 			        }
 			      },
 			      "State": "Generated",
@@ -4318,7 +4318,7 @@ cultureInfo en-US
 			  "Relationships": {
 			    "f_weather_has_d_location": {
 			      "Binding": {
-			        "ConceptualEntity": "fWeather"
+			        "ConceptualEntity": "Weather"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4371,7 +4371,7 @@ cultureInfo en-US
 			    },
 			    "f_weather_has_d_date": {
 			      "Binding": {
-			        "ConceptualEntity": "fWeather"
+			        "ConceptualEntity": "Weather"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4516,7 +4516,7 @@ cultureInfo en-US
 			    },
 			    "fWork_info_has_v_Measures_measure_work_info_data_labels": {
 			      "Binding": {
-			        "ConceptualEntity": "fWork info"
+			        "ConceptualEntity": "Work info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4549,7 +4549,7 @@ cultureInfo en-US
 			    },
 			    "dJob_info_has_end_year": {
 			      "Binding": {
-			        "ConceptualEntity": "dJob info"
+			        "ConceptualEntity": "Job info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4582,7 +4582,7 @@ cultureInfo en-US
 			    },
 			    "dJob_info_has_start_year": {
 			      "Binding": {
-			        "ConceptualEntity": "dJob info"
+			        "ConceptualEntity": "Job info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4615,7 +4615,7 @@ cultureInfo en-US
 			    },
 			    "dJob_info_has_role_summary": {
 			      "Binding": {
-			        "ConceptualEntity": "dJob info"
+			        "ConceptualEntity": "Job info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4648,7 +4648,7 @@ cultureInfo en-US
 			    },
 			    "dJob_info_has_year_in_role": {
 			      "Binding": {
-			        "ConceptualEntity": "dJob info"
+			        "ConceptualEntity": "Job info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4681,7 +4681,7 @@ cultureInfo en-US
 			    },
 			    "dJob_info_has_role": {
 			      "Binding": {
-			        "ConceptualEntity": "dJob info"
+			        "ConceptualEntity": "Job info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4714,7 +4714,7 @@ cultureInfo en-US
 			    },
 			    "fWork_info_has_frequency_rank": {
 			      "Binding": {
-			        "ConceptualEntity": "fWork info"
+			        "ConceptualEntity": "Work info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4747,7 +4747,7 @@ cultureInfo en-US
 			    },
 			    "fWork_info_has_tech_image": {
 			      "Binding": {
-			        "ConceptualEntity": "fWork info"
+			        "ConceptualEntity": "Work info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4780,7 +4780,7 @@ cultureInfo en-US
 			    },
 			    "fWork_info_has_data_processing__other": {
 			      "Binding": {
-			        "ConceptualEntity": "fWork info"
+			        "ConceptualEntity": "Work info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4813,7 +4813,7 @@ cultureInfo en-US
 			    },
 			    "fWork_info_has_visualisation__analysis": {
 			      "Binding": {
-			        "ConceptualEntity": "fWork info"
+			        "ConceptualEntity": "Work info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4846,7 +4846,7 @@ cultureInfo en-US
 			    },
 			    "fWork_info_has_frequency_rank_value": {
 			      "Binding": {
-			        "ConceptualEntity": "fWork info"
+			        "ConceptualEntity": "Work info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4879,7 +4879,7 @@ cultureInfo en-US
 			    },
 			    "fWork_info_has_subtopic": {
 			      "Binding": {
-			        "ConceptualEntity": "fWork info"
+			        "ConceptualEntity": "Work info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4912,7 +4912,7 @@ cultureInfo en-US
 			    },
 			    "fWork_info_has_topic": {
 			      "Binding": {
-			        "ConceptualEntity": "fWork info"
+			        "ConceptualEntity": "Work info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4945,7 +4945,7 @@ cultureInfo en-US
 			    },
 			    "d_location_has_location_other": {
 			      "Binding": {
-			        "ConceptualEntity": "dLocation"
+			        "ConceptualEntity": "Location"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -4978,7 +4978,7 @@ cultureInfo en-US
 			    },
 			    "d_location_has_longitude": {
 			      "Binding": {
-			        "ConceptualEntity": "dLocation"
+			        "ConceptualEntity": "Location"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5011,7 +5011,7 @@ cultureInfo en-US
 			    },
 			    "d_location_has_latitude": {
 			      "Binding": {
-			        "ConceptualEntity": "dLocation"
+			        "ConceptualEntity": "Location"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5044,7 +5044,7 @@ cultureInfo en-US
 			    },
 			    "d_location_has_location": {
 			      "Binding": {
-			        "ConceptualEntity": "dLocation"
+			        "ConceptualEntity": "Location"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5077,7 +5077,7 @@ cultureInfo en-US
 			    },
 			    "d_date_has_midweekweekend": {
 			      "Binding": {
-			        "ConceptualEntity": "dDate"
+			        "ConceptualEntity": "Date"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5110,7 +5110,7 @@ cultureInfo en-US
 			    },
 			    "d_date_has_day_of_week": {
 			      "Binding": {
-			        "ConceptualEntity": "dDate"
+			        "ConceptualEntity": "Date"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5143,7 +5143,7 @@ cultureInfo en-US
 			    },
 			    "d_date_has_date": {
 			      "Binding": {
-			        "ConceptualEntity": "dDate"
+			        "ConceptualEntity": "Date"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5176,7 +5176,7 @@ cultureInfo en-US
 			    },
 			    "f_weather_has_symbol": {
 			      "Binding": {
-			        "ConceptualEntity": "fWeather"
+			        "ConceptualEntity": "Weather"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5209,7 +5209,7 @@ cultureInfo en-US
 			    },
 			    "f_weather_has_weather_subcategory": {
 			      "Binding": {
-			        "ConceptualEntity": "fWeather"
+			        "ConceptualEntity": "Weather"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5242,7 +5242,7 @@ cultureInfo en-US
 			    },
 			    "f_weather_has_weather_category": {
 			      "Binding": {
-			        "ConceptualEntity": "fWeather"
+			        "ConceptualEntity": "Weather"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5275,7 +5275,7 @@ cultureInfo en-US
 			    },
 			    "f_weather_has_temp": {
 			      "Binding": {
-			        "ConceptualEntity": "fWeather"
+			        "ConceptualEntity": "Weather"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5308,7 +5308,7 @@ cultureInfo en-US
 			    },
 			    "f_weather_has_time": {
 			      "Binding": {
-			        "ConceptualEntity": "fWeather"
+			        "ConceptualEntity": "Weather"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5407,7 +5407,7 @@ cultureInfo en-US
 			    },
 			    "f_weather_has_table_measures_average_temp_c": {
 			      "Binding": {
-			        "ConceptualEntity": "fWeather"
+			        "ConceptualEntity": "Weather"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5440,7 +5440,7 @@ cultureInfo en-US
 			    },
 			    "f_weather_in_d_location": {
 			      "Binding": {
-			        "ConceptualEntity": "fWeather"
+			        "ConceptualEntity": "Weather"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5485,7 +5485,7 @@ cultureInfo en-US
 			    },
 			    "d_location_in_location_other": {
 			      "Binding": {
-			        "ConceptualEntity": "dLocation"
+			        "ConceptualEntity": "Location"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5530,7 +5530,7 @@ cultureInfo en-US
 			    },
 			    "d_location_in_location": {
 			      "Binding": {
-			        "ConceptualEntity": "dLocation"
+			        "ConceptualEntity": "Location"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5575,7 +5575,7 @@ cultureInfo en-US
 			    },
 			    "dJob_info_is_ended_in_end_year": {
 			      "Binding": {
-			        "ConceptualEntity": "dJob info"
+			        "ConceptualEntity": "Job info"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -5617,7 +5617,7 @@ cultureInfo en-US
 			    },
 			    "dJob_info_is_started_in_start_year": {
 			      "Binding": {
-			        "ConceptualEntity": "dJob info"
+			        "ConceptualEntity": "Job info"
 			      },
 			      "State": "Generated",
 			      "Roles": {

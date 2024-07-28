@@ -3,10 +3,10 @@
   "name": "65e3b7403fcb9ebbcefe",
   "position": {
     "x": 32,
-    "y": 120,
+    "y": 96,
     "z": 2000,
     "width": 1216,
-    "height": 312,
+    "height": 320,
     "tabOrder": 4000
   },
   "visual": {
@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fWeather"
+                      "Entity": "Weather"
                     }
                   },
                   "Property": "Time"
@@ -39,7 +39,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dLocation"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Location"
@@ -57,7 +57,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dLocation"
+                      "Entity": "Location"
                     }
                   },
                   "Property": "Location Other"
@@ -97,7 +97,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Average Temp (c)"
+                  "Property": "Average temp (c)"
                 }
               },
               "queryRef": "_Measures.Average Temp (c)",
@@ -118,7 +118,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dLocation"
+                            "Entity": "Location"
                           }
                         },
                         "Property": "Location Other"
@@ -143,7 +143,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dLocation"
+                    "Entity": "Location"
                   }
                 },
                 "Property": "Location Other"
@@ -442,7 +442,7 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Entity": "dLocation"
+                                          "Entity": "Location"
                                         }
                                       },
                                       "Property": "Location Other"
@@ -537,7 +537,7 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Entity": "dLocation"
+                                          "Entity": "Location"
                                         }
                                       },
                                       "Property": "Location Other"
@@ -573,7 +573,7 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Entity": "dLocation"
+                                          "Entity": "Location"
                                         }
                                       },
                                       "Property": "Location Other"
@@ -652,7 +652,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dLocation"
+                            "Entity": "Location"
                           }
                         },
                         "Property": "Location Other"
@@ -694,7 +694,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dLocation"
+                            "Entity": "Location"
                           }
                         },
                         "Property": "Location Other"
@@ -1024,7 +1024,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dDate"
+                "Entity": "Date"
               }
             },
             "Property": "Date"

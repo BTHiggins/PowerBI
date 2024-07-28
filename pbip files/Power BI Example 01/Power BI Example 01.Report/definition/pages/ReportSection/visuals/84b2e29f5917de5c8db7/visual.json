@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.0.0/schema.json",
   "name": "84b2e29f5917de5c8db7",
   "position": {
-    "height": 240,
-    "width": 336,
     "x": 0,
     "y": 24,
     "z": 2000,
-    "tabOrder": 5000
+    "width": 336,
+    "height": 248.00000000000003,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "tableEx",
@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dDate"
+                      "Entity": "Date"
                     }
                   },
                   "Property": "Date"
@@ -37,7 +37,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Average Temp (c)"
+                  "Property": "Average temp (c)"
                 }
               },
               "queryRef": "_Measures.Average Temp (c)",
@@ -83,7 +83,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dDate"
+                    "Entity": "Date"
                   }
                 },
                 "Property": "Date"
@@ -304,7 +304,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dLocation"
+                          "Entity": "Location"
                         }
                       },
                       "Property": "Location"
@@ -471,7 +471,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dLocation"
+                "Entity": "Location"
               }
             },
             "Property": "Location"

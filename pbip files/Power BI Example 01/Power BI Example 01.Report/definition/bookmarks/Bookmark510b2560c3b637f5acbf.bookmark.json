@@ -21,7 +21,7 @@
                         "Column": {
                           "Expression": {
                             "SourceRef": {
-                              "Entity": "fWork info"
+                              "Entity": "Work info"
                             }
                           },
                           "Property": "Visualisation & Analysis"
@@ -38,7 +38,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fWork info"
+                          "Entity": "Work info"
                         }
                       },
                       "Property": "Sub-topic"
@@ -59,7 +59,7 @@
                     "From": [
                       {
                         "Name": "f",
-                        "Entity": "fWork info",
+                        "Entity": "Work info",
                         "Type": 0
                       }
                     ],
@@ -108,7 +108,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fWork info"
+                          "Entity": "Work info"
                         }
                       },
                       "Property": "Topic"
@@ -128,7 +128,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fWork info"
+                          "Entity": "Work info"
                         }
                       },
                       "Property": "Topic"
@@ -142,10 +142,10 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "fWork info"
+                          "Entity": "Work info"
                         }
                       },
-                      "Property": "Frequency Rank"
+                      "Property": "Frequency rank"
                     }
                   }
                 ]
@@ -163,7 +163,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dJob info"
+                          "Entity": "Job info"
                         }
                       },
                       "Property": "Year"
@@ -177,7 +177,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dJob info"
+                          "Entity": "Job info"
                         }
                       },
                       "Property": "Year"

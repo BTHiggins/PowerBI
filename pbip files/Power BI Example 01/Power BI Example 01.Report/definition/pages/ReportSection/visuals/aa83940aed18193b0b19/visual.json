@@ -4,9 +4,9 @@
   "position": {
     "x": 624,
     "y": 352,
-    "z": 4000,
+    "z": 8000,
     "width": 224,
-    "height": 80,
+    "height": 56,
     "tabOrder": 0
   },
   "visual": {
@@ -63,7 +63,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
@@ -72,10 +72,17 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 3,
+                      "ColorId": 0,
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
                 }
               }
             }

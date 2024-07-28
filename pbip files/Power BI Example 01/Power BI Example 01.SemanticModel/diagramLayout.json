@@ -23,68 +23,63 @@
         },
         {
           "location": {
-            "x": 126.95909505183172,
-            "y": 1.2570207430874447
+            "x": 894.15567585828012,
+            "y": 316.76922725803553
           },
-          "nodeIndex": "dDate",
-          "nodeLineageTag": "b841eff6-fe8c-44d2-af0a-87119fd68be4",
+          "nodeIndex": "Work info",
           "size": {
-            "height": 188.68681331221302,
+            "height": 320.91575108295069,
             "width": 234
           },
-          "zIndex": 1
-        },
-        {
-          "location": {
-            "x": 885.81440619814339,
-            "y": 0
-          },
-          "nodeIndex": "dJob info",
-          "nodeLineageTag": "69acf3fd-9370-4352-b9e4-ab3a7776d093",
-          "size": {
-            "height": 261.65445634792371,
-            "width": 234
-          },
-          "zIndex": 2
+          "zIndex": 0
         },
         {
           "location": {
             "x": 219.41269660136763,
             "y": 313.93650558177774
           },
-          "nodeIndex": "fWeather",
-          "nodeLineageTag": "892bc418-dfea-442c-a53b-5dceb3ff3eb1",
+          "nodeIndex": "Weather",
           "size": {
             "height": 265.41025758065484,
             "width": 234
           },
-          "zIndex": 6
-        },
-        {
-          "location": {
-            "x": 894.15567585828012,
-            "y": 316.76922725803553
-          },
-          "nodeIndex": "fWork info",
-          "nodeLineageTag": "0509c7b6-da97-47d0-8b59-359494d7c415",
-          "size": {
-            "height": 320.91575108295069,
-            "width": 234
-          },
-          "zIndex": 3
+          "zIndex": 0
         },
         {
           "location": {
             "x": 425.678265328334,
             "y": 0
           },
-          "nodeIndex": "dLocation",
-          "nodeLineageTag": "9b2d0a15-2eab-4cc0-ba39-89e2585c5fa7",
+          "nodeIndex": "Location",
           "size": {
             "height": 183.54212445852465,
             "width": 234
           },
-          "zIndex": 4
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 885.81440619814339,
+            "y": 0
+          },
+          "nodeIndex": "Job info",
+          "size": {
+            "height": 261.65445634792371,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 126.95909505183172,
+            "y": 1.2570207430874447
+          },
+          "nodeIndex": "Date",
+          "size": {
+            "height": 188.68681331221302,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

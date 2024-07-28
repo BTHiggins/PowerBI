@@ -3,10 +3,10 @@
   "name": "02426bf57f3936191bfd",
   "position": {
     "x": 64,
-    "y": 112,
+    "y": 80,
     "z": 4000,
     "width": 1152,
-    "height": 176,
+    "height": 208,
     "tabOrder": 2000
   },
   "visual": {
@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dJob info"
+                      "Entity": "Job info"
                     }
                   },
                   "Property": "Year"
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dJob info"
+                          "Entity": "Job info"
                         }
                       },
                       "Property": "Role summary"
@@ -66,7 +66,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Graph Constant"
+                  "Property": "Graph constant"
                 }
               },
               "queryRef": "fctWork info.Constant",
@@ -82,7 +82,7 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dJob info"
+                    "Entity": "Job info"
                   }
                 },
                 "Property": "Year"
@@ -239,7 +239,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -280,7 +280,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -322,7 +322,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -364,7 +364,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -405,7 +405,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -447,7 +447,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -489,7 +489,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -531,7 +531,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -572,7 +572,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -614,7 +614,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Entity": "dJob info"
+                            "Entity": "Job info"
                           }
                         },
                         "Property": "Year"
@@ -752,7 +752,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "data_labels_for_role"
+                  "Property": "Data labels for role"
                 }
               }
             },
@@ -763,7 +763,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "dJob info"
+                          "Entity": "Job info"
                         }
                       },
                       "Property": "Year"
@@ -803,7 +803,7 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Entity": "dJob info"
+                                          "Entity": "Job info"
                                         }
                                       },
                                       "Property": "Role ID"
@@ -835,7 +835,7 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Entity": "dJob info"
+                                          "Entity": "Job info"
                                         }
                                       },
                                       "Property": "Role ID"
@@ -867,7 +867,7 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Entity": "dJob info"
+                                          "Entity": "Job info"
                                         }
                                       },
                                       "Property": "Role ID"
@@ -899,7 +899,7 @@
                                     "Column": {
                                       "Expression": {
                                         "SourceRef": {
-                                          "Entity": "dJob info"
+                                          "Entity": "Job info"
                                         }
                                       },
                                       "Property": "Role ID"
@@ -1089,6 +1089,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'ReportSection3e38ac11801dfbacaf1e'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

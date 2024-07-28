@@ -3,10 +3,10 @@
   "name": "90dfd4be8c67283a5276",
   "position": {
     "x": 384,
-    "y": 448,
+    "y": 432,
     "z": 12000,
     "width": 576,
-    "height": 256,
+    "height": 272,
     "tabOrder": 1000
   },
   "visual": {
@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dDate"
+                      "Entity": "Date"
                     }
                   },
                   "Property": "Midweek-Weekend"
@@ -35,7 +35,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dDate"
+                      "Entity": "Date"
                     }
                   },
                   "Property": "Date"
@@ -50,7 +50,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dDate"
+                      "Entity": "Date"
                     }
                   },
                   "Property": "Day of week"
@@ -72,7 +72,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Daily Max Temp (c)"
+                  "Property": "Daily max temp (c)"
                 }
               },
               "queryRef": "fctWeather.Daily Max Temp (c)",
@@ -87,7 +87,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Average Temp (c)"
+                  "Property": "Average temp (c)"
                 }
               },
               "queryRef": "fctWeather.Average Temp (c)",
@@ -102,7 +102,7 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Daily Min Temp (c)"
+                  "Property": "Daily min temp (c)"
                 }
               },
               "queryRef": "fctWeather.Daily Min Temp (c)",
@@ -505,7 +505,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Daily Min Temp (c)"
+                      "Property": "Daily min temp (c)"
                     }
                   }
                 },
@@ -517,7 +517,7 @@
                           "Entity": "_Measures"
                         }
                       },
-                      "Property": "Daily Max Temp (c)"
+                      "Property": "Daily max temp (c)"
                     }
                   }
                 }
@@ -681,7 +681,7 @@
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dLocation"
+                "Entity": "Location"
               }
             },
             "Property": "Location"
